@@ -1,0 +1,407 @@
+.container_main {
+    padding-left: calc(50% - ($widthContainerHeader / 2 - 50px));
+    padding-right: calc(50% - ($widthContainerHeader / 2 - 50px));
+}
+.container {
+    padding-left: calc(50% - ($widthContainerHeader / 2 ));
+    padding-right: calc(50% - ($widthContainerHeader / 2 ));
+}
+.container_page{
+    padding-left: calc(50% - ($widthContainerPage / 2 ));
+    padding-right: calc(50% - ($widthContainerPage / 2 ));
+}
+.container_feedback_slider{
+    padding-left: calc(50% - ($widthContainerHeader / 2 - 36px));
+    padding-right: calc(50% - ($widthContainerHeader / 2 - 36px));
+}
+
+
+
+.section__subtitle{ 
+    color: $colorTitleSubtitle; 
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    &_feedback{
+        color: $colorBase;
+    }
+}
+.section__title{
+    color: $colorTitleSubtitle;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
+    span{
+        color: $colorTitle;
+    }
+    &_feedback{
+        color: $colorBase;
+    }
+}
+.comeback{
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+    color: $colorTitleSubtitle;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    opacity: 0.5;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover{
+        font-weight: 500;
+    }
+}
+.menu{
+    max-width: 766px;
+    &__list {
+        display: flex;
+        gap: 43px;
+    }
+    
+    &__link{
+        color: $colorBase;
+        font-size: 18px;
+        font-weight: 400;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.burger__menu {
+    position: relative;
+   
+    &_btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        span, .burger__menu_span {
+            display: block;
+            width: 100%;
+            height: 6px;
+            background: $colorBase;
+        }
+        .burger__menu_span{
+            background: $colorBase3;
+        }
+       
+    }
+    &_nav {
+        position: fixed;
+        width: 320px;
+        height: 682px;
+        top: 0;
+        right: 0;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        z-index: 999;
+        display: none;
+    }
+    
+    &_nav.active {
+        display: block;
+        padding: 15px 10px 86px;
+    }
+    &_top{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    &_close{
+        cursor: pointer; 
+        img{
+            width: 23px;
+            height: 23px;
+        }
+    }
+    &_socialpages{
+        display: flex;
+        gap: 23px;
+    }
+    &_userblock{
+        display: flex;
+    }
+    &_list{
+        margin-top: 61px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+       
+        li:not(:last-child){
+            position: relative;
+            padding-bottom: 30px;
+        }
+        li:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: rgba(196, 196, 196, 0.2); 
+        }
+    }
+    &_link{
+        font-size: 30px;
+        font-weight: 500;
+        color: $colorBase3;
+        opacity: 0.5;
+    }
+    
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 998;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.user__block{
+    display: flex;
+    gap: 10px;
+    height: 32px;
+}
+.account, .cart{
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.menu__footer{
+    max-width: 766px;
+    margin-top: 26px;
+    .menu__list{
+        gap: 0;
+    }
+    li:not(:last-child)::after{
+        content: '\2022';
+        width: 6px;
+        height: 6px;
+        color: $colorBase;
+        padding: 0 18px;
+    }
+}
+.menu_main{
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    &_link{
+        color: $colorBase3;
+        font-size: 18px;
+        font-weight: 400;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.menu__mobile, .menu_main_mobile{
+    display: flex;
+    align-items:center;
+    gap: 20px;
+}
+.menu_main_mobile{
+    width: 100%;
+    justify-content: space-between;
+}
+.social__block, .social__pages{
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+.social__pages_footer {
+    margin-top: 19px;
+}
+.social__link{
+    width: 26px;
+    height: 26px;
+}
+.social__link_main path{
+    fill: $colorBase3;
+}
+.callback, .callback_dark{
+    height: 45px;
+    padding: 0 19px;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    
+}
+.callback{
+    background: $colorBase;
+    color: $colorBase2;
+    &:hover{
+        background: $colorSort;
+        color: $colorBase;
+    }
+}
+.callback_dark{
+    background: $colorBase3;
+    color: $colorBase;
+}
+.logo__big{
+    margin-top: 48px;
+    img{
+        width: 308px;
+        height: 113px;
+    }
+}
+.logo__footer img{
+    width: 264px;
+    height: 74px;
+}
+.logo_main img{
+    width: 220px;
+    height: 81px;   
+}
+
+
+.leftblockmodal{
+    &_left{
+        width: 298px;
+        padding: 55px 36px 59px;
+        background: url('@/assets/images/bg/modal_bg.webp');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    &_subtitle{
+        margin-top: 105px;
+        color: $colorBase;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 900;
+    }
+    &_descr{
+        margin-top: 18px;
+        @include styleTextModal;
+    }
+    &_btn{
+        margin-top: 92px;
+        width: 226px;
+        padding: 9px 0;
+        border-radius: 13px;
+        border: 2px solid #FFF;
+        background-color: transparent;
+        @include styleTextModal;
+        cursor: pointer;
+        &:hover{
+            background: $colorBase3; 
+        }
+    }
+}
+
+.error-message{
+    position: absolute;
+    color: red;
+}
+
+
+@media (max-width: 375px) {
+    .container_main_mobile{
+        padding-left: calc(50% - 166px);
+        padding-right: calc(50% - 166px);
+    }
+    .container_mobile{ 
+        padding-left: calc(50% - 177px);
+        padding-right: calc(50% - 177px);
+    }
+    .container_page{
+        padding-left: calc(50% - 167px);
+        padding-right: calc(50% - 167px);
+    }
+    .section__subtitle{
+        font-size: 14px;
+        letter-spacing: 10%;
+    }
+    .section__title{
+        margin-top: 5px; 
+        font-size: 30px;  
+        &_mobile{
+            margin-top: 18px;
+        }      
+    }
+    .logo__footer img{
+        width: 274px;
+        height: 101px; 
+        margin: 0 auto;
+    }
+    .leftblockmodal{
+        &_left{
+            width: 100%;
+            height: 180px;
+            padding: 10px;
+            border-radius: 10px;
+            .logo_main{
+                display: none;
+            }
+        }
+        &_subtitle{
+            margin-top: 20px;
+        }
+        &_descr{
+            margin-top: 10px;
+        }
+        &_btn{
+            margin-top: 20px;
+            width: 100%;
+            padding: 9px 0;
+            border-radius: 13px;
+            border: 2px solid #FFF;
+            background-color: transparent;
+            @include styleTextModal;
+            cursor: pointer;
+            &:hover{
+                background: $colorBase3; 
+            }
+        }
+    }
+    .logo_main img{
+        width: 112px;
+        height: 45px; 
+    }
+    .comeback_mobile{
+        font-size: 16px;
+    }
+    .callback{
+        background: $colorBase;
+        color: $colorBase2;
+        &:hover{
+            background: $colorBase;
+            color: $colorBase2;
+        }
+    } 
+    
+}

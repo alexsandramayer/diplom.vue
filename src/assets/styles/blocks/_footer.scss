@@ -1,0 +1,105 @@
+.footer{
+    min-height: 275px;
+    margin-top: 77px;
+    padding-top: 100px;
+    padding-bottom: 29px;
+    background: url('../images/bg/footer__bg.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__left{
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__tel{
+        margin-top: 15px;
+        color: $colorBase;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    &__email{
+        margin-top: 5px;
+        color: $colorBase;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__descr{
+        margin-top: 20px;
+        max-width: 196px;
+        color: $colorBase;
+        font-size: 12px;
+        font-weight: 400; 
+        line-height: 14px;
+    }
+    &__btn{
+        margin-top: 45px;
+        font-size: 20px;
+        font-weight: 400;
+        color: $colorBase;
+        text-align: center;
+        text-decoration-line: underline;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+    &__content_mobile{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+}
+.footer-catalog{
+    margin-top: 72px;
+}
+.footer-category{
+    margin-top: 79px;
+} 
+.footer__training{
+    margin-top: 53px;
+}
+.footer__blog{
+    margin-top: 73px;
+}
+
+@media (max-width: 375px) {
+    .footer{
+        min-height: 474px;
+        margin-top: 26px;
+        padding-top: 105px;
+        padding-bottom: 39px;
+        background-position: 67% center;
+        &__tel, &__email{
+            text-align: center;
+        }
+        &__descr{
+            margin: 0 auto;
+            margin-top: 45px;
+            text-align: center;
+        }    
+    }
+    .footer-catalog{
+        margin-top: 72px;
+    }
+    .footer-category{
+        margin-top: 79px;
+    } 
+    .footer__training{
+        margin-top: 53px;
+    }
+    .footer__blog{
+        margin-top: 73px;
+    }
+    
+}

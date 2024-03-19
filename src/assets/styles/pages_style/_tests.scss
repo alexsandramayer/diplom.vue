@@ -1,0 +1,115 @@
+.tests{
+    margin-top: 18px;
+    &__content{
+        padding: 27px 46px 35px 38px;
+        @include bgBlock;
+    }
+    &__title{
+        @include titleStyle;
+    }
+    &__items{
+        margin-top: 23px;
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
+    &__item{
+        @include  bgArticle;
+        padding: 17px  49px 28px 39px;
+        display: flex;
+        gap: 99px;
+        &_block{
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        &_title{
+           @include itemTitleStyle;
+        }
+        &_subtitle{
+            margin-top: 13px;
+            @include styleSpanText;
+        }
+        &_btn{
+            display: block;
+            width: 229px;
+            padding: 11px 0;
+            @include btn;
+            color: $colorBase;
+            text-align: justify;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                @include styleHoverBlueBtn;
+            }
+        }
+        &_descr{
+            margin-top: 4px;
+            @include styleText3;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .tests{
+        margin-top: 25px;
+        &__content{
+            padding: 0;
+            border-radius: none;
+            background: none;
+            box-shadow: none;
+        }
+        &__title{
+            font-size: 30px;
+            text-align: center;
+        }
+        &__items{
+            display: none;
+        }
+        &__items_mobile{
+            margin-top: 23px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        &__item{
+            @include  bgArticle;
+            padding: 20px 22px 27px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            &_block{
+                display: none;
+            } 
+            &_block_mobile{
+                display: block;
+            }
+            &_title{
+                color: $colorBase3;
+                font-size: 30px;
+                font-weight: 700;
+                text-align: left;
+            }
+            &_subtitle{
+                margin-top: 18px;
+                font-size: 16px;
+                text-align: left;
+            }
+            &_btn{
+                margin-top: 26px;
+                width: 100%;
+                padding: 11px 92px;
+                &:hover{
+                    @include btn;
+                    color: $colorBase;
+                }
+            }
+            &_descr{
+                margin-top: 24px;
+                font-size: 16px;
+            }
+        }
+    }
+}

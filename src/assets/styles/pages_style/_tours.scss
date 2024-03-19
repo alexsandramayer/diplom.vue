@@ -1,0 +1,149 @@
+.tours{
+    margin-top: 41px;
+    &__content{
+        padding: 25px 46px 27px;
+        @include bgBlock;
+    }
+    &__title, &__subtitle{
+        @include titleStyle;
+    }
+    &__text-first, &__text-second{
+        @include styleText3;
+    }
+    &__text-first{
+        margin-top: 20px;
+    }
+    &__text-second{
+        margin-top: 41px;
+    }
+    &__subtitle{
+        margin-top: 36px;
+    }
+    &__items{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+    }
+    &__item{
+        @include bgArticle;
+        display: flex;
+        gap: 24px;
+        &_img{
+            width: 265px;
+            height: 160px;  
+            border-radius: 10px;
+        }
+        &_block{
+            padding: 21px 0 27px;
+            width: 775px;
+            display: flex;
+           justify-content: space-between;
+        }
+        &_left{
+            max-width: 229px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &_title{
+            @include itemTitleStyle;
+        }
+        &_btn{
+            display: block;
+            padding: 11px 0;
+            max-width: 229px;
+            @include btn;
+            color: $colorBase;
+            text-align: justify;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                @include styleHoverBlueBtn;
+            }
+        }
+        &_right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &_data, &_price{
+            display: flex;
+            align-items: center;
+            gap: 21px;
+            @include itemTitleStyle;
+        }
+        &_data-calendar{
+            width: 33px;
+            height: 38px;
+        }
+        &_data-price{
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .tours{
+        margin-top: 28px;
+        &__content{
+            display: none;
+        }
+        &__subtitle{
+            margin-top: 0;
+            text-align: center;
+        }
+        &__items{
+            gap: 22px;
+        }
+        &__item{
+            flex-direction: column;
+            gap: 0;
+            &_img{
+                width: 335px;
+                height: 202px; 
+            }
+            &_block{ 
+                display: none;
+            }
+            &_block_mobile{
+                padding: 15px 23px 27px;
+                width: 100%; 
+                display: block;
+            }
+            &_title{
+                text-align: center;
+            }
+            &_btn{
+                margin-top: 26px;
+                padding: 11px 97px;
+                max-width: 100%;
+                &:hover{
+                    @include btn;
+                    color: $colorBase;
+                }
+                
+            }
+            &_right_mobile{
+                margin-top: 39px;
+                display: flex;
+                flex-direction: row;
+                gap: 26px;
+            }
+            &_data, &_price{
+                gap: 7px;
+            }
+            &_data-calendar{
+                width: 21px;
+                height: 24px;
+            }
+            &_data-price{
+                width: 21px;
+                height: 21px;
+            }
+        }
+    }
+}

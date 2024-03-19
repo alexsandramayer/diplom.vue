@@ -1,0 +1,189 @@
+.accountpage{
+    margin-top: 66px;
+    &__content{
+        padding: 52px 51px;
+        @include bgBlock;
+        &_top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__title{
+        color: $colorBase3;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    &__logout{
+        color: $colorBase3; 
+        font-size: 30px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background-color: $colorBase;
+        transition: transform 0.3s ease;
+        &_img{
+            width: 30px;
+            height: 30px;
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
+    } 
+    &__infoblock{
+        margin-top: 58px;
+        display: flex;
+        gap: 35px;
+    }
+    &__userinfo{
+        width: 524px;
+        height: 320px;
+        padding: 35px 46px 28px 37px;
+        @include bgBlockAccount;
+        &-title{
+            @include titleStyle;
+        }
+    }
+    &__block{
+        &-data{
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-left, &-right{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        &-subtitle{
+            color: $colorBase3;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        &-descr{
+            color: $colorBase3;
+            text-align: right;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &-btn{
+            margin-top: 46px;
+            width: 229px;
+            padding: 10px 0;
+            @include btn;
+            color: $colorBase;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover{
+                @include styleHoverBlueBtn;
+            }
+        }
+    }
+
+    &__useractions{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__userorders, &__usercourses{
+        width: 524px;
+        height: 210px;
+        padding: 35px 46px 28px 37px;
+        @include bgBlockAccount;
+        &-title{
+            @include titleStyle;
+        }
+        &-descr{
+            margin-top: 20px;
+            color: $colorBase3;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &-btn{
+            margin-top: 30px;
+            width: 229px;
+            padding: 10px 0;
+            @include btn;
+            color: $colorBase;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover{
+                @include styleHoverBlueBtn;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 375px) {
+    .accountpage{
+        margin-top: 24px;
+        &__content{
+            padding: 0;
+            border-radius: none;
+            background: none;
+            box-shadow: none;
+        }
+        &__title{
+            font-size: 30px;
+        }
+        &__logout{
+            &:hover{
+                transform: scale(1);
+            }
+        } 
+        &__infoblock{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+        &__userinfo{
+            width: 100%;
+            height: 300px;
+            padding: 30px 25px 30px;
+        }
+        &__block{
+            &-data{
+                margin-top: 45px;
+            }
+            &-btn{
+                width: 100%;
+                padding: 10px 0;
+                &:hover{
+                    color: $colorBase;
+                    @include btn;
+                }
+            }
+        }
+    
+        &__useractions{ 
+            gap: 35px;
+        }
+        &__userorders, &__usercourses{
+            width: 100%;
+            padding: 30px 25px 30px;
+            &-btn{
+                width: 100%;
+                &:hover{
+                    color: $colorBase;
+                    @include btn;
+                }
+            }
+        }
+        &__userorders{
+            height: 205px;
+        }
+        &__usercourses{
+            height: 228px;
+        }
+    }
+}

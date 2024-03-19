@@ -1,0 +1,157 @@
+@mixin btn {
+    border-radius: 12px;
+    background: linear-gradient(180deg, $colorButton2 0%, $colorButton1 100%);
+    box-shadow: 0px 4px 10px 0px rgba(92, 194, 243, 0.25); 
+    border: none;
+    outline: none;
+}
+@mixin checkedItemInModal{
+    border-radius: 10px;
+    background: linear-gradient(180deg, $colorButton2 0%, $colorButton1 100%);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
+}
+@mixin bgBlockAccount{
+    border-radius: 10px; 
+    background: $colorBase;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+@mixin bgBlock{
+    border-radius: 10px;
+    background: $colorBg;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
+}
+@mixin cardInCart{
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
+}
+@mixin paddingBlock{
+    margin-left: 20px; 
+    margin-right: 19px; 
+}
+@mixin bgArticle{ 
+    border-radius: 10px;
+    background: $colorBase; 
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
+}
+@mixin paddingBlockCertificate{
+    margin-left: 12px;
+    margin-right: 10px;
+} 
+
+@mixin titleStyle{
+    color: $colorTitleSubtitle;
+    font-size: 24px;
+    font-weight: 700;
+}
+@mixin itemTitleStyle{
+    color: $colorTitleSubtitle;
+    font-size: 18px;
+    font-weight: 500;
+}
+@mixin styleText{
+    color: $colorText;
+    font-size: 14px;
+    font-weight: 400;
+}
+@mixin styleText2{
+    color: $colorText;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+}
+@mixin styleText3{
+    color: $colorText;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 400;
+}
+@mixin styleSpanText{
+    color: $colorText;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 500;
+}
+@mixin paginBtnBlog{
+    color: $colorBase3;
+    font-size: 14px;
+    font-weight: 500;
+}
+@mixin bgModal{
+    border-radius: 10px;
+    background: $colorBase;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
+}
+@mixin styleTextModal{
+    color: $colorBase;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+} 
+@mixin styleModalTitle{
+    color: $colorBase3;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+@mixin styleProductTitle{
+    color: $colorBase3;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@mixin styleFormModal{
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+@mixin styleInputModal{
+    width: 458px;
+    padding: 16px 39px;
+    border-radius: 10px;
+    background: $colorInput;
+    color: $colorBase3;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
+    outline: none;
+    border: 1px solid $colorInput;
+}
+@mixin styleBtnModal{
+    width: 458px;
+    @include btn;
+    padding: 13px;
+    color: $colorBase;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+@mixin styleBtnBottomModal{
+    margin-top: 25px;
+    float: right;
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+    color: $colorBase3;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+@mixin styleInputInvalidModal{
+    border-color: red;
+    font-size: 16px;
+    color: red;
+}
+
+@mixin styleHoverBlueBtn{
+    background: $colorBase;
+    outline: 2px solid $colorButton2;
+    color: $colorBase3;
+    
+}
+@mixin styleHoverWhiteBtn{
+    background: $colorSort;
+    color: $colorBase;
+    border: none;
+    outline: none;
+}
