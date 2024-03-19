@@ -92,7 +92,11 @@ export default {
         const goToPage = (page) => {
             currentPage.value = page;
             updateItemsPerPage();
-            window.scrollTo({
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            document.body.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
@@ -102,22 +106,30 @@ export default {
             if (currentPage.value > 1) {
                 currentPage.value--;
                 updateItemsPerPage();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
+            };
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            document.body.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         };
 
         const nextPage = () => {
             if (currentPage.value < totalPages.value) {
                 currentPage.value++;
                 updateItemsPerPage();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
+            };
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            document.body.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         };
 
 
