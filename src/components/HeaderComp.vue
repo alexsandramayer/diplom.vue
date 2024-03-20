@@ -67,7 +67,7 @@
         <div class="menu_main_mobile" v-if="isSmallScreen"> 
              <button @click="toggleMenu" class="burger__menu_btn">
                 <span class="burger__menu_span"></span>
-                <span class="burger__menu_span"></span>
+                 <span class="burger__menu_span"></span>
                 <span class="burger__menu_span"></span>
             </button>
                 

@@ -21,7 +21,7 @@
                 <div class="user__block">
                     <router-link  to="/cart" class="cart">
                         <img :src="cartIcon" alt="cart icon">
-                    </router-link >
+                    </router-link > 
                 </div>
             </div> 
         </div>
@@ -43,49 +43,51 @@
                 </div>
             </div>
         </div>
-
-        <button @click="toggleMenu" class="burger__menu_btn">
+        <div class="menu_main_mobile" v-if="isSmallScreen"> 
+            <button @click="toggleMenu" class="burger__menu_btn">
             <span class="burger__menu_span"></span>
             <span class="burger__menu_span"></span>
             <span class="burger__menu_span"></span>
-        </button>
-                    
-        <div class="burger__menu"  v-if="isMenuOpen" >
-            
-            <nav class="burger__menu_nav" :class="{ 'active': isMenuOpen }">
-                <div class="burger__menu_top">
-                    <span class="burger__menu_close" @click="closeBurgerMenu"><img :src="closeIcon" alt="close burger menu"></span>
+            </button>
+                        
+            <div class="burger__menu"  v-if="isMenuOpen" >
                 
-                    <div class="burger__menu_socialpages">
-                        <div
-                            class="social__link"
-                            v-for="(item, index) in socialPagesMobile"
-                            :key="index"
-                        >
-                            <router-link to="#">
-                                <img :src="item.img" alt="item image">
-                            </router-link>
+                <nav class="burger__menu_nav" :class="{ 'active': isMenuOpen }">
+                    <div class="burger__menu_top">
+                        <span class="burger__menu_close" @click="closeBurgerMenu"><img :src="closeIcon" alt="close burger menu"></span>
+                    
+                        <div class="burger__menu_socialpages">
+                            <div
+                                class="social__link"
+                                v-for="(item, index) in socialPagesMobile"
+                                :key="index"
+                            >
+                                <router-link to="#">
+                                    <img :src="item.img" alt="item image">
+                                </router-link>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                
-                
-                <ul class="burger__menu_list">
-                    <li v-for="link in links" :key="link.alias">
-                        <router-link :to="getLinkUrl(link)" @click="scrollToBlock(link.url)" class="burger__menu_link"> {{link.text}} </router-link>
-                    </li>
-                </ul>
-                
-            </nav>
+                    
+                    
+                    
+                    <ul class="burger__menu_list">
+                        <li v-for="link in links" :key="link.alias">
+                            <router-link :to="getLinkUrl(link)" @click="scrollToBlock(link.url)" class="burger__menu_link"> {{link.text}} </router-link>
+                        </li>
+                    </ul>
+                    
+                </nav>
+            </div>
+            <div @click="closeBurgerMenu" class="overlay" :class="{ 'active': isMenuOpen }"></div>
+            <button
+                class="callback_dark"
+                @click="openModal('callbackmodal')"
+            >
+                Обратный звонок
+            </button>
         </div>
-         <div @click="closeBurgerMenu" class="overlay" :class="{ 'active': isMenuOpen }"></div>
-        <button
-            class="callback callback_dark"
-            @click="openModal('callbackmodal')"
-        >
-            Обратный звонок
-        </button>
+        
     </div>
     
    
