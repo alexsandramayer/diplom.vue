@@ -81,7 +81,9 @@
             </header>
     
             <div class="logo__big">
-                <router-link  to="/"><img :src="logo" alt="logo" /></router-link>
+                <a  href="/" v-if="isSmallScreen"><img :src="logoMini" alt="logo" ></a>
+
+                <a href="/" v-else><img :src="logo" alt="logo" ></a>
             </div>
             <div class="main__content">
                 <div class="main__info">
@@ -276,6 +278,7 @@ export default {
     data() {
         return {
             logo: require("@/assets/images/logo/logo.svg"),
+            logoMini: require("@/assets/images/logo/logo_main.svg"),
             links: [
                 {id: 0, text: 'О клубе', alias: 'aboutClub', url: {path: '/', hash: '#aboutClub'}},
                 {id: 1, text: 'Обучение', alias: 'training', url: '/training'},

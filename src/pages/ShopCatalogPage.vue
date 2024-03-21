@@ -13,7 +13,7 @@
                 :imageUrl="category.imageUrl"
                 :category="category"
                 @click="goToProducts(category)"
-            /> 
+            />  
         </ul>
     </section>
     <FooterComp />

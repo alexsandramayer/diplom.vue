@@ -11,7 +11,7 @@
                         Выбрать производителя
                     </button>
                     <ul v-show="showManufacturers" class="products__filter_list" >
-                        <li 
+                        <li  
                             class="products__filter_all"
                            :class="{
                             active: selectedManufacturer === null,

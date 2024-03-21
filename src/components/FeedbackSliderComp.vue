@@ -9,7 +9,7 @@
 
         <Carousel
             :itemsToShow="isSmallDevice ? 1 : 3"
-            :wrapAround="true"
+            :wrapAround="true" 
             :transition="1500"
             
             class="feedback__carousel "
