@@ -24,7 +24,7 @@
     </div>
  
     <div class="pagination container_page" >
-        <button class="prev" :disabled="currentPage === 1" @click="prevPage"><img :src="arrowLeft"></button>
+        <button class="prev" aria-label="arrow left" :disabled="currentPage === 1" @click="prevPage"><img :src="arrowLeft" alt="arrow left"></button>
         <div class="numbers">
             <button class="number" @click="goToPage(1)" v-if="visiblePages[0] > 2 && currentPage !== 1">1</button>
             <span class="number" v-if="visiblePages[0] > 2">...</span>
@@ -32,7 +32,7 @@
             <span class="number" v-if="visiblePages[visiblePages.length - 1] < totalPages - 1">...</span>
             <button class="number" @click="goToPage(totalPages)" v-if="visiblePages[visiblePages.length - 1] < totalPages">{{ totalPages }}</button> 
         </div>
-        <button class="next"  :disabled="currentPage === totalPages" @click="nextPage"><img :src="arrowRight"></button>
+        <button class="next" aria-label="arrow right" :disabled="currentPage === totalPages" @click="nextPage"><img :src="arrowRight" alt="arrow right"></button>
     </div>
 
    
